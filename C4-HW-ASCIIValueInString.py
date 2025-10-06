@@ -1,8 +1,12 @@
-# Program to find ASCII values of characters in a string
+# Program to find ASCII values of characters in a string using a function
+
+# Function to display ASCII values
+def show_ascii_values(text):
+    for char in text:
+        print(f"The ASCII value of '{char}' is {ord(char)}")
 
 # Take input from user
 text = input("Enter a string: ")
 
-# Loop through each character and print its ASCII value
-for char in text:
-    print(f"The ASCII value of '{char}' is {ord(char)}")
+# Call the function
+show_ascii_values(text)
