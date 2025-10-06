@@ -1,5 +1,4 @@
-#Rabin-Karp algorithm in python
-
+# Rabin-Karp algorithm in python
 d = 10
 def searchPattern(pattern, text, q):
     m = len(pattern)
@@ -13,12 +12,12 @@ def searchPattern(pattern, text, q):
     for i in range(m-1):
         h = (h*d) % q
 
-    #Calculate the hash value for pattern qnd text
+    # Calculate the hash value for pattern and text
     for i in range(m):
         p = (d*p + ord(pattern[i])) % q
-        t = (d*p + ord(text[i])) % q
+        t = (d*t + ord(text[i])) % q
 
-    #find the match
+    # Find the match
     for i in range(n-m+1):
         if p == t:
             for j in range(m):
